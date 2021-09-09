@@ -26,5 +26,11 @@ public class Endereco {
 	@ManyToOne
 	@JoinColumn(name = "id_cliente")
 	private Cliente cliente;
-	
+
+	public Endereco(Long idEndereco, String rua, int numero, String estado) {
+		this.idEndereco = idEndereco;
+		this.rua = rua;
+		this.numero = numero;
+		this.estado = estado;
+	}
 }
