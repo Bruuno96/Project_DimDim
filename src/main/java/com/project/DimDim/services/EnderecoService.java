@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class EndereçoRepository {
+public class EnderecoService {
 
     @Autowired
     private EnderecoRepository repository;
