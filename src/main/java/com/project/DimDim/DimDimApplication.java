@@ -16,7 +16,7 @@ import java.sql.Date;
 import java.util.List;
 
 @SpringBootApplication(scanBasePackages = { "com.project.DimDim" })
-@ComponentScan({ "com.project.DimDim.*" })
+@ComponentScan({ "com.project.DimDim.repository" })
 public class DimDimApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DimDimApplication.class, args);

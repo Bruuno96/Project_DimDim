@@ -17,10 +17,10 @@ import java.util.List;
 
 @Configuration
 @Profile("test")
-@RequiredArgsConstructor()
 public class DbInitializer {
 
-    private final ClienteRepository clienteRepository;
+	@Autowired
+    private ClienteRepository clienteRepository;
 
     @Bean
     public boolean instantiateDatabase() {

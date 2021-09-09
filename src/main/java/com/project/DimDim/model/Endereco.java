@@ -33,4 +33,7 @@ public class Endereco {
 		this.numero = numero;
 		this.estado = estado;
 	}
+
+	public Endereco() {
+	}
 }

@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@NoArgsConstructor
 @AllArgsConstructor
 @Table(name="TB_DIMDIM_CLIENTE")
 @SequenceGenerator(allocationSize = 1, name = "seq_cliente", sequenceName = "SQ_TB_DIMDIM_CLIENTE")
@@ -40,4 +39,15 @@ public class Cliente {
 		
 		@OneToMany(mappedBy = "cliente", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
 		private List<Endereco> enderecos;
+
+	public Cliente(Long idCliente, String nome, Date dataNascimento, String email, int telefone) {
+		this.idCliente = idCliente;
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.email = email;
+		this.telefone = telefone;
+	}
+
+	public Cliente() {
+	}
 }
